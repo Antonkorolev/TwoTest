@@ -6,9 +6,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.concurrent.TimeUnit;
 
-import static org.openqa.selenium.support.ui.ExpectedConditions.stalenessOf;
-import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
-
 /**
  * Created by Anton Korolev on 14.05.2018.
  */
@@ -39,7 +36,6 @@ public class SecondTest {
         bottomOne.click();
         driver.findElement((By.xpath("//span[.='Показывать по 12']"))).click();
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
-
 
         WebDriverWait wait  = new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("/html/body/div[1]/div[4]/div[2]/div[1]/div[2]/div/div[1]/div[49]/div[3]/div[2]/a")));

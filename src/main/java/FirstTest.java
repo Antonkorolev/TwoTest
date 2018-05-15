@@ -1,5 +1,3 @@
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -50,7 +48,7 @@ public class FirstTest {
 
         driver.findElement(By.xpath("/html/body/div[1]/div[1]/noindex/div/div/div[2]/div/div[1]/form/span/span[2]/button")).click();
 
-        String resultname =driver.findElement(By.xpath("/html/body/div[1]/div[4]/div[2]/div[2]/div/div[1]/div[1]/div/h1")).getText();
+        String resultname =driver.findElement(By.xpath("/html/body/div[1]/div[4]/div[2]/div[1]/div[2]/div/div[1]/div[1]/div[4]/div[1]/div")).getText();
 
         if(!currentname.equals(resultname)) {
             throw new Exception("Проверка не пройдена");
